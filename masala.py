@@ -76,9 +76,40 @@ a, b = b, a
 print(f"Almashtirish {a, b }")
 
 
+# 11-masala
+total_rent = int(input("Uy ijarasi narxi: "))
+n = int(input("Oylar soni: "))
+time = total_rent / n
+print(f"Har oy siz {time} so'm to'lashingiz kerak")
 
 
+# 12-masala
+d = int((input("Masofa km ni kiriting: ")))
+v = int((input("Tezlikni km/soat ni kiriting: ")))
+time = d / v
+print(f"Bosib o'tilgan vaqt: {time}")
 
+
+# 13-masala
+seats = int(input("Chiptalar soni: "))
+passengers = int(input("Yo'lovchilar soni: "))
+per_person = seats // passengers
+left = seats % passengers
+print(f"Har bir yo'lovchiga: {per_person} ta chipta to'g'ri keladi")
+print(f"Ortiqcha chipta: {left}")
+
+
+# 14-masala
+consumption = int(input("Litirni kiriting: "))
+d = int(input("Msofani kiriting: "))
+fuel = consumption * d / 100
+print(f"Sarf qilingan yoqilg'i miqdori: {fuel}")
+
+
+# 15-masala
+salary = int(input("Maoshingizni kiriting: "))
+net = salary * (1-0.12)
+print(f"Netto maoshi: {net}")
 
 
 
