@@ -135,7 +135,7 @@ print("Yakuniy narx:", umumiy_narx, "so‘m")
 
 #11-masala:
 m_ogirlik = float(input("Meva og‘irligini kiriting (g): "))
-m_korinish = input("Meva ko‘rinishini kiriting (“yaxshi”/“yomon”): ").lower()
+m_korinish = input("Meva ko‘rinishini kiriting (“yaxshi”/“yomon”): ")
 if m_korinish == "yomon":
     print("Past sifat")
 elif m_ogirlik < 100:
@@ -192,6 +192,204 @@ elif d_nomi == "serial" and 20 <= soat <= 22:
     print("Qayta ko'ring")
 else:
     print("Boshqa ko'rsatuv tanlang")
+
+
+#16-masala:
+tur = input("Skuter turi (elektr/oddiy): ")
+masofa = float(input("Masofani kiriting (km): "))
+if tur == "elektr":
+    km_narx = 2000
+else:
+    narx_km = 1000
+umumiy_narx = km_narx * masofa
+if masofa > 10:
+    umumiy_narx *= 0.85
+print("Yakuniy narx:", umumiy_narx, "so'm")
+
+
+#17-masala:
+m_turi = input("Muommo turini kiriting(dasturiy, uskunaviy ")
+if m_turi == "dasturiy":
+    print("50000")
+else:
+    q_narx = float(input("Qisim narxini kiriting "))
+    if q_narx >= 100000:
+        print("150000")
+    else:
+        print("To'lov: 80000")
+
+
+#18-masala:
+i_darajasi = int(input("Ifloslanish darajasini kiriting(%): "))
+sh_tezligi = int(input("Shamol tezligini kiriting(km/soat: "))
+if i_darajasi > 50 and sh_tezligi < 5:
+    print("Maska kiying")
+elif i_darajasi <= 50 and sh_tezligi >= 10:
+    print("Sof havo")
+else:
+    print("Oddiy holat")
+
+
+#19-masala:
+k_turi = input("Kurs turini kiriting(akvarel, yog'li): ")
+oy_davomliligi = int(input("Davomliligini kiriting(oy): "))
+if k_turi == "akvarel":
+    oy_narx = 200000
+else:
+    narx_oy = 300000
+umumiy_narx = oy_narx * oy_davomliligi
+if  oy_davomliligi >= 3:
+    umumiy_narx *= 0.9
+print("Yakuniy narx:")
+
+
+#20-masala:
+q_turi = input("Qulf turini kiriting(elektron, mexanik): ")
+yosh = int(input("Yoshini kiriting(yil): "))
+if q_turi == "elektron" and yosh < 2:
+    print("Yuqori xavfsizlik")
+elif q_turi == "mexanik" and yosh < 5:
+    print("O'rtacha xavfsizlik")
+else:
+    print("Past xavfsizlik")
+
+
+#21-masala:
+hudud = input("Hudud turini kiriting(shahar markazi, shahar cheti...): ")
+x_soni = int(input("Xonar sonini kiriting: "))
+if hudud == "shahar markazi" and x_soni == 3:
+    print("5000000")
+elif hudud == "shahar cheti" and x_soni == 2:
+    print("3000000")
+else:
+    print("2000000")
+
+
+#22-masala:
+quvvat = int(input("Quvvat foizini kiriting(%): "))
+masofa = float(input("Masofani kiriting(km): "))
+if quvvat < 20 and masofa > 5:
+    print("Zaryadlang")
+elif quvvat < 50 and masofa < 3:
+    print("Extiyot bo'ling")
+else:
+    print("Yaxshi holat")
+
+
+#23-masala:
+ruxsat = int(input("Kamera ruxsatini kiriting(MP): "))
+y_darajasi = input("Yorug'lik darajasini kiriting(yaxshi,o'rtacha,yomon): ")
+if ruxsat >= 12 and y_darajasi == "yaxshi":
+    print("Yuqori sifat")
+elif ruxsat >= 8 and y_darajasi == "O'rtacha":
+    print("O'rtacha sifat")
+else:
+    print("Past sifat")
+
+
+#24-masala:
+masofa = int(input("Masofani kiriting(km): "))
+havo = input("Ob-havo darajasini kiriting(yaxshi,o'rtacha,yomon): ")
+if masofa < 5 and havo == "yaxshi":
+    print("Piyoda")
+elif masofa < 20 and havo == "o'rtacha":
+    print("Velosiped")
+else:
+    print("Avtobus")
+
+
+#25-masala:
+email = input("Email manzilingizni kiriting: ")
+if len(email) >= 10 and email.endswith("@gmail.com"):
+    print("Qabul qilindi")
+elif len(email) < 10 and email.endswith("@yahoo.com"):
+    print("Qisqa email")
+else:
+    print("Noto'g'ri email")
+
+
+#26-masala:
+ovqat = input("Ovqat turini kiriting(salat,go'sht): ")
+porsiya = float(input("Porsiya turini kiriting(g): "))
+if ovqat == "salat":
+    asosiy_kkal = (porsiya/100) * 50
+    if porsiya >= 300:
+        print(f"Umumiy kkal:{asosiy_kkal * 1.1}")
+elif ovqat == "go'sht":
+    asosiy_kkal = (porsiya/100)* 200
+    if porsiya >= 300:
+        print(f"Umumiy kkal: {asosiy_kkal}")
+else:
+    print("Qiymatni to'g'ri kiriting ")
+
+
+#27-masala:
+summa = int(input("Kredit summasini kiriting(mln so'm): "))
+muddat = int(input("Muddatni kiriting(yil): "))
+if summa < 10 and muddat == 1:
+    print("12%")
+elif summa >= 10 and muddat == 2:
+    print("10%")
+else:
+    print("15%")
+
+
+#28-masala:
+sinf = input("Sinfni kiriting(biznes/ekonom): ")
+masofa = float(input("Masofani kiriting(km): "))
+if sinf == "biznes" and masofa < 1000:
+    asosiy = 1000000
+    if masofa >= 1000:
+        print(f"Yakuniy narx:{asosiy * 1.2}")
+    else:
+        print("C")
+elif sinf == "ekanom" and masofa < 1000:
+    asosiy = 5000000
+    if masofa >= 1000:
+        print(f"Yakuniy narx:{asosiy * 1.2}")
+    else:
+        print("Yakuniy narx:{asosiy}")
+elif sinf == "biznes":
+    asosiy = 1000000
+    if masofa >= 1000:
+        print(f"Yakuniy narx:{asosiy}")
+elif sinf == "ekonom":
+    asosiy = 5000000
+    if masofa >= 1000:
+        print(f"Yakuniy narx:{asosiy * 1.2}")
+    else:
+        print("Yakuniy narx:{asosiy}")
+else:
+    print("Qiymatda xatolik")
+
+
+#29-masala:
+m_turi = input("Mahsulot turini kiriting(lo'shon/krem): ")
+oy = int(input("Oylar sonini kiriting: "))
+if m_turi == "lo'shon" and oy >= 6:
+    print("Ishlatish mumkun emas")
+elif m_turi == "krem" and oy >= 12:
+    print("Ishlatish mumkun emas")
+else:
+    print("Xavfsiz ishatishingiz mumkun")
+
+
+#30-masala:
+k_turi = input("Kiyim turini kiriting(bolalar/kattalar): ")
+if k_turi == "bolalar":
+    print("2 kun")
+else:
+    olcham = input("O'lcham turini kiriting:(S,M,L,XL): ")
+    if olcham == "s" or olcham == "M":
+        print("4 kun")
+    else:
+        print("6 kun")
+
+
+
+
+
+
 
 
 
