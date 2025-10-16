@@ -386,7 +386,238 @@ else:
         print("6 kun")
 
 
+#31-masala
+qavatlar = int(input("Tort nechta qavatli bo‘lsin? (kamida 1): "))
+meva = input("Meva qo‘shilsinmi? (ha/yo‘q): ")
+shokolad = input("Shokolad qo‘shilsinmi? (ha/yo‘q): ")
+Asosiy = 100000 + (qavatlar - 1) * 50000
+if meva == "ha":
+    asosiy += 20000
+    if shokolad == "ha":
+        asosiy += 30000
+        print("Tortning yakuniy narxi:", asosiy)
 
+
+#32-masala:
+mato = input("Mato turini kiriting(paxta/sintetik/..): ")
+i_darajasi = input("Ifloslanish darajasini kiriting(yengil/og'ir..): ")
+if mato == "paxta" and i_darajasi == "yengil":
+    print("Rejim 1")
+elif mato == "sintetik" and i_darajasi == "og'ir":
+    print("Rejim 3")
+else:
+    print("Rejim 2")
+
+
+#33-masala:
+k_turi == input("Kitob turini kiriting(sir/jinoyat/sevgi/romantik/kosmos/kelajak): ")
+if k_turi == "sir" or "jinoyat":
+    print("Detektiv")
+elif k_turi == "sevgi" or "romantika":
+    print("Romantik")
+elif k_turi == "kosmos" or "kelajak":
+    print("Fantastik")
+else:
+    print("Boshqa")
+
+
+#34-masala:
+ch_turi = input("Chipta turini kiriting(VIP/oddiy): ")
+yosh = int(input("Yoshingizni kiriting: "))
+if ch_turi == "VIP" and yosh > 60:
+    print("50000")
+elif ch_turi == "oddiy" and yosh < 18:
+    print("20000")
+else:
+    print("30000")
+
+
+#35-masala:
+kun = input("Bugun qaysi kun? (dushanba, seshanba, ... , yakshanba): ")
+soat = int(input("Soat nechchi? (0–23): "))
+ish_kunlari = ["dushanba", "seshanba", "chorshanba", "payshanba", "juma"]
+dam_kunlari = ["shanba", "yakshanba"]
+if kun in ish_kunlari and 9 <= soat <= 18:
+    print("Ochiq")
+elif kun in dam_kunlari and 10 <= soat <= 16:
+    print("Ochiq")
+else:
+    print("Yopiq")
+
+
+#36-masala:
+o_turi = input("O'simlik turini kiriting(gul/daraxt): ")
+fasl = input("Fasilni kiriting(bahor/yoz/kuz/qish): ")
+if o_turi == "gul" and fasl == "bahor":
+    print("Haftada 3 marta sug'oring")
+elif o_turi == "darxt" and fasl == "yoz":
+    print("Har kuni sug'oring")
+elif o_turi == "gul" and fasl == "qish":
+    print("Haftada 1 marta sug'oring")
+else:
+    print("Haftada 2 marta sug'oring")
+
+
+#37-masala:
+budjet = int(input("Budjetni kiriting(so‘mda): "))
+vip = input("VIP kerakmi?(ha/yo‘q): ")
+yaxshi_korish = input("Yaxshi ko‘rish kerakmi?(ha/yo‘q): ")
+if budjet > 100000 and vip == "ha":
+    print("Birinchi qator VIP")
+elif budjet > 100000 and vip == "yo‘q":
+    print("Birinchi qator oddiy")
+elif budjet <= 100000 and yaxshi_korish == "ha":
+    print("O'rta qatorlar")
+else:
+    print("Orqa qatorlar")
+
+
+#38-masala:
+foiz = int(input("Xotira bandligi foizini kiriting(%): "))
+if foiz > 95:
+    print("Xotira to'la! Tozalash kerak")
+elif foiz > 80:
+    print("Xotira kam qoldi")
+elif foiz > 50:
+    print("Xotira yetarli")
+else:
+    print("Xotira bo'sh")
+
+
+#39-masala:
+ball = int(input("Umumiy ballni kiriting: "))
+if ball > 90:
+    print("Ustoz")
+elif ball > 70:
+    print("Malakali")
+elif ball > 50:
+    print("O'rta")
+else:
+    print("Boshlang'ich")
+
+
+#40-masala:
+ball = int(input("Umumiy ballingizni kiriting(0-100): "))
+if ball > 90:
+    print("5 baxo")
+elif ball > 70:
+    print("4 baxo")
+elif ball > 60:
+    print("3 baxo")
+else:
+    print("Ball yetarli emas")
+
+
+#41-masala:
+yosh = int(input("Yoshingizni kiriting: "))
+talaba_h = input("Talabamisiz(ha/yo'q): ")
+if yosh < 7:
+    print("Bepul")
+elif talaba_h == "ha":
+    print("5000")
+elif yosh > 60:
+    print("Chegirma: 3000")
+else:
+    print("7000")
+
+
+#42-masala:
+oy = int(input("Oy raqamini kiriting(1-12): "))
+if oy == 12 or oy == 1 or oy == 2:
+    print("Qish")
+elif oy == 3 or oy == 4 or oy == 5:
+    print("Bahor")
+elif oy == 6 or oy == 7 or oy == 7:
+    print("Yoz")
+else:
+    print("Kuz")
+
+
+#43-masala:
+model = input("Telefon modelini kiriting(iPhone/Samsung): ")
+holat = input("Telefon holatini kiriting(yaxshi/ishlatilgan): ")
+if model == "iPhone" and holat == "yangi":
+    print("1200")
+elif model == "iPhone" and holat == "ishlatilgan":
+    print("800")
+elif model == "Samsung" and holat == "yangi":
+    print("900")
+else:
+    print("600")
+
+
+#44-masala:
+yosh = int(input("Yoshingizni kiriting: "))
+ball = int(input("Test ballingizni kiriting: "))
+if yosh > 6 and ball > 70:
+    print("Qabul qilindi")
+else:
+    print("Qabul qilinmadi")
+
+
+#45-masala:
+tezlik = (input("Internet tezligini kiriting(Mbps): "))
+if tezlik < 5:
+    print("Juda sekin")
+elif tezlik < 20:
+    print("O'rtacha")
+elif tezlik <= 100:
+    print("Tez")
+else:
+    print("Juda tez")
+
+
+#46-masala:
+vaqt = input("Vaqtni kiriting(kam/ko'p/o'rtacha): ")
+joy = input("Joy mavjudligini kiriting(kam/ko'p): ")
+sabr = input("Sabr borligini kiriting(bor/yo'q): ")
+if vaqt == "kam" and joy == "kam":
+    print("Baliq")
+elif vaqt == "ko'p" and sabr == "bor":
+    print("it")
+else:
+    print("Mushuk")
+
+
+#47-masala:
+yosh = int(input("Yoshingizni kiriting: "))
+tajriba = input("Tajriba muddatingizni kiriting(yil): ")
+daraja = input("Ingliz tili bo'yicha darajangizni kiriting(o'rta/yaxshi): ")
+if yosh >= 20 and tajriba >= 2 and daraja == "o'rta" or daraja == "yaxshi":
+    print("Qabul qilindi")
+else:
+    print("Qabul qilinmadi")
+
+
+#48-masala:
+yil = int(input("Yilni kiriting(butun son): "))
+if (yil % 4 == 0 and yil % 100 != 0) or (yil % 400 == 0):
+    print("Kabisa yili")
+else:
+    print("Kabisa yili emas")
+
+
+#49-masala:
+daromad = float(input("Oylik daromadingizni kiriting (mln so‘mda): "))
+if daromad <= 1:
+    print("0%")
+elif daromad <= 3:
+    print("10%")
+else:
+    print("20%")
+
+
+#50-masala:
+yosh = int(input("Yoshingizni kiriting: "))
+mahsulot = input("Mahsulot turini kiriting (Oziq-ovqat/kiyim/texnika...): ")
+if mahsulot == "oziq-ovqat":
+    print("Chegirma yo‘q")
+elif yosh < 12:
+    print("20% chegirma")
+elif yosh > 60:
+    print("15% chegirma")
+else:
+    print("Chegirma mavjud emas")
 
 
 
