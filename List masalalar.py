@@ -139,6 +139,7 @@ print("Alifbo tartibida",students)
 print("Index",a_index)
 print("Ro'yhatda Diyor mavjudmi",mavjud)
 print("O'chirilgan talaba", students)
+print("Ro'hay uzunlihi",uzunlik)
 
 
 #10-masala:
@@ -157,12 +158,31 @@ favorites.sort(reverse=True)
 print("Asil ro'yhat",favorites)
 print("Nusxa",favorites )
 print("Alifbo tartibida",favorites)
-uzunlik = len(favorites)
+print("Ro'hat uzunligi",uzunlik)
 print("Index",index)
 print("Ro'yhatda telfon mavjudmi",t_mavjud)
 print("O'chirilgan mahsulot",favorites)
+print(f"Teskari tartibda: {favorites}")
 
-
+#11-masala:
+songs = ['Yomg\'ir', 'Sevgi', 'Hayot', 'Kuz']
+songs.insert(1,'Baxor')
+songs.remove('Kuz')
+songs.sort()
+index_yomgir = songs.index("Yomg'ir")
+print("Yomg'ir indeksi:", index_yomgir)
+hayot = 'hayot' in songs
+print("Ro'yhatda hayot bormi",hayot)
+songs.pop()
+print("O'xirgi qo'shiq olib tashlash",songs)
+uzunlik = len(songs)
+print("R'yhat uzunligi",uzunlik)
+songs.sort(reverse=True)
+print(f"Teskari tartibda: {songs}")
+copy_songs = songs.copy()
+copy_songs.append('Yoz')
+print("Asl ro'yxat:", songs)
+print("Nusxa ro'yxat:",copy_songs)
 
 
 
